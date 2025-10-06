@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.main_container {
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*background-image: url("../img/background_login.jpg");*/
+    background: url("../img/background_login.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.login_container {
+    backdrop-filter: blur(6px);
+    border-style: solid;
+    border-color: white;
+    border-width: 0.1px;
+    border-radius: 5px;
+    padding: 30px;
+
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+.input_group{
+
+    width: 90%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: gray;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 400px;
+
+}
+
+.input_group > input{
+    background: transparent;
+    border-style: none;
+}
+
+.input_group > svg{
+    float: right;
+    color: white;
+}
+
+::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+.login_button{
+    width: 90%;
+    display: block;
+    margin-bottom: 30px;
+    min-height: 40px;
+}
+
+.don´t_account{
+
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+.don´t_account > a{
+    text-decoration: none;
+    color: white !important;
+    font-weight: bold;
+}
+
+.form_footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form_footer a{
+    text-decoration: none;
+    color: white !important;
+    font-weight: bold;
+}
