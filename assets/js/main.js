@@ -1,27 +1,60 @@
 var operation = "";
-var value = ""
+var value = 0;
+var newNumber = false;
 
-function setNumber(number){
+function setNumber(number) {
+    var result = document.getElementById('result');
 
-	console.log(number)
-	document.getElementById('result').innerHTML = number
+    if (newNumber) {
+        result.innerHTML = number;
+        newNumber = false;
+    } else {
+        if (result.innerHTML === "0") {
+            result.innerHTML = number;
+        } else {
+            result.innerHTML += number;
+        }
+    }
 }
 
-function setOperation(type){
+function setOperation(type) {
+    var currentValue = parseFloat(document.getElementById('result').innerHTML);
 
-	console.log(type)
+    if (type === "equals") {
+        if (operation !== "") {
+            var result;
 
-	if (operation == "") {
-		operation = type
-		value = parseInt(document.getElementById('result').innerHTML)
-	}else{
+            switch (operation) {
+                case "plus":
+                    result = value + currentValue;
+                    break;
+                case "minus":
+                    result = value - currentValue;
+                    break;
+                case "multiply":
+                    result = value * currentValue;
+                    break;
+                case "divide":
+                    result = currentValue !== 0 ? value / currentValue : "Error";
+                    break;
+            }
 
-		if (operation == "plus") {
-			result = value  + parseInt(document.getElementById('result').innerHTML)
-			console.log(result)
+            document.getElementById('result').innerHTML = result;
+            operation = "";
+            value = 0;
+            newNumber = true;
+        }
+        return;
+    }
 
-			document.getElementById('result').innerHTML = result
-		}
-	}
-	console.log(type)
+    if (type === "clear") {
+        operation = "";
+        value = 0;
+        document.getElementById('result').innerHTML = "0";
+        return;
+    }
+
+    value = currentValue;
+    operation = type;
+    newNumber = true;
 }
