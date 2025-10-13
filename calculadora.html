@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Calculadora
+    </title>
+
+    <link rel="stylesheet" href="assets/styles/calculadora.css">
+
+</head>
+
+<body>
+
+    <div class="calculator_container">
+
+        <div class="header">
+            <h1 id="result">
+                0
+            </h1>
+        </div>
+        
+        <div class="body">
+            <button onclick="setOperation('clear')">C</button>
+            <button onclick="setNumber(7)">7</button>
+            <button onclick="setNumber(8)">8</button>
+            <button onclick="setNumber(9)">9</button>
+            <button onclick="setOperation('divide')">÷</button>
+
+            <button onclick="setNumber(4)">4</button>
+            <button onclick="setNumber(5)">5</button>
+            <button onclick="setNumber(6)">6</button>
+            <button onclick="setOperation('multiply')">×</button>
+
+            <button onclick="setNumber(1)">1</button>
+            <button onclick="setNumber(2)">2</button>
+            <button onclick="setNumber(3)">3</button>
+            <button onclick="setOperation('minus')">−</button>
+
+            <button onclick="setNumber(0)">0</button>
+            <button onclick="setOperation('plus')">+</button>
+            <button onclick="setOperation('equals')">=</button>
+        </div>
+
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

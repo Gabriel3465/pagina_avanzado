@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #002b5c, #004b8d);
+    color: white;
+}
+
+/* Contenedor principal centrado */
+main {
+    text-align: center;
+}
+
+/* Título principal */
+main h1 {
+    font-size: 64px;
+    margin-bottom: 50px;
+}
+
+/* Menú */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+@media (max-width: 600px) {
+    main h1 {
+        font-size: 40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+}
