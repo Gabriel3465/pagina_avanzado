@@ -37,7 +37,6 @@
         </label>
         <input type="email" id="email" name="email" required>
 
-
         <br>
         <br>
 
@@ -50,14 +49,12 @@
         <br>
 
         <p>Género:</p>
-        <input type="radio" id="masculino" name="genero" value="masculino">
-        <label for="masculino">Masculino</label><br>
-
-        <input type="radio" id="femenino" name="genero" value="femenino">
-        <label for="femenino">Femenino</label><br>
-
-        <input type="radio" id="otro" name="genero" value="otro">
-        <label for="otro">Otro</label><br>
+        <select id="genero" name="genero">
+            <option value="">Selecciona una opción</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
 
         <br>
         <br>
@@ -66,14 +63,13 @@
             Biografia:
         </label>
         <br>
-        <textarea name="comentarios" rows="7" cols="30" placeholder="Ingrese su bio"></textarea>´
+        <textarea name="comentarios" rows="7" cols="30" placeholder="Ingrese su bio"></textarea>
 
         <br><br>
 
-        <button type="submit">
+        <button type="button" onclick="validarEmailMensaje()">
             Guardar registro
         </button>
-
 
     </div>
 

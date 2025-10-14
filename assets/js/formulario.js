@@ -10,13 +10,20 @@ function onlyLetters(event) {
     if (!letters.includes(pressedKey)) {
         return false
     }
-
-    function validateEmail(email) {
-
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        return emailPattern.test(email);
-
-    }
-
 }
+
+function validateEmail(email) {
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+function validarEmailMensaje() {
+    const email = document.getElementById("email").value;
+
+    if (validateEmail(email)) {
+        // "Correo válido"
+    } 
+}
+
+
