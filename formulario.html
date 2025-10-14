@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        formulario
+    </title>
+
+    <!-- <link rel="stylesheet" href="assets/styles/calculadora.css"> -->
+
+</head>
+
+<body>
+
+    <div class="formulario_container">
+
+        <label>
+            Nombre:
+        </label>
+        <input type="text" name="" placeholder="Username" onkeypress="return onlyLetters(event)">
+
+        <br>
+        <br>
+
+        <label>
+            Apellido:
+        </label>
+        <input type="text" name="" placeholder="Lastname" onkeypress="return onlyLetters(event)">
+
+        <br>
+        <br>
+
+        <label>
+            Correo:
+        </label>
+        <input type="email" id="email" name="email" required>
+
+
+        <br>
+        <br>
+
+        <label>
+            numero:
+        </label>
+        <input type="number" name="" placeholder="">
+
+        <br>
+        <br>
+
+        <p>Género:</p>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label><br>
+
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        <label for="femenino">Femenino</label><br>
+
+        <input type="radio" id="otro" name="genero" value="otro">
+        <label for="otro">Otro</label><br>
+
+        <br>
+        <br>
+
+        <label>
+            Biografia:
+        </label>
+        <br>
+        <textarea name="comentarios" rows="7" cols="30" placeholder="Ingrese su bio"></textarea>´
+
+        <br><br>
+
+        <button type="submit">
+            Guardar registro
+        </button>
+
+
+    </div>
+
+    <script src="assets/js/formulario.js"></script>
+
+</body>
+
+</html>
