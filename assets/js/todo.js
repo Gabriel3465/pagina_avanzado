@@ -13,11 +13,21 @@ function getTask() {
     return false;
 }
 
+function deleteTask() {
+    let tasks = JSON.parse(window.localStorage.getItem("tasks"));
+    
+    tasks.splice(index, 1);
+
+    window.localStorage.setItem("tasks", JSON.stringify(tasks))
+    updateTodoList()
+}
+
 function updateTodoList() {
     var lista = "<ol>";
     let tasks = JSON.parse(window.localStorage.getItem("tasks"));
 
-    tasks.forEach((task) => lista += "<li>" + task + "</li>");
+    tasks.forEach((task) => lista += "<li>" + task +
+"........................" + "<button onclick=\"deleteTask()\">Eliminar tarea</button>" + "</li>");
 
     lista += "</ol>";
 
