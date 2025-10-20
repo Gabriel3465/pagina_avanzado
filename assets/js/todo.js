@@ -7,12 +7,12 @@ function getTask() {
 
     task.push(document.getElementById("task_name").value)
 
+    document.getElementById("task_name").value = "";
+
     window.localStorage.setItem("tasks", JSON.stringify(task))
     updateTodoList()
 
     return false;
-
-    document.getElementById("task").value = "";
 
 }
 
@@ -29,9 +29,8 @@ function updateTodoList() {
     var lista = "<ol>";
     let tasks = JSON.parse(window.localStorage.getItem("tasks"));
 
-    tasks.forEach((task, index) => lista += "<li>" + task +
-        "........................" +
-        "<button class='delete_btn' onclick=\"deleteTask(" + index + ")\">Eliminar tarea</button>" + "</li>");
+    tasks.forEach((task, index) => lista += "<li class='task'>" + task +
+        "<button class='delete_btn' onclick=\"deleteTask(" + index + ")\">Eliminar</button>" + "</li>");
 
     lista += "</ol>";
 

@@ -53,37 +53,40 @@ button {
 }
 
 .todo_list {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .task {
-  background: #f9f9f9;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border-left: 4px solid #007bff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex;
+    border-left: 4px solid yellowgreen;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
 }
 
 button {
-  background: #4c6783;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 16px;
-  font-weight: 600;
-  cursor: pointer;
+    background: #4c6783;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .delete_btn {
-  background: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 6px 10px;
-  cursor: pointer;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-left: auto;
 }
