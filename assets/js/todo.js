@@ -11,11 +11,14 @@ function getTask() {
     updateTodoList()
 
     return false;
+
+    document.getElementById("task").value = "";
+
 }
 
 function deleteTask(index) {
     let tasks = JSON.parse(window.localStorage.getItem("tasks"));
-    
+
     tasks.splice(index, 1);
 
     window.localStorage.setItem("tasks", JSON.stringify(tasks))
@@ -27,8 +30,8 @@ function updateTodoList() {
     let tasks = JSON.parse(window.localStorage.getItem("tasks"));
 
     tasks.forEach((task, index) => lista += "<li>" + task +
-"........................" + 
-"<button onclick=\"deleteTask("+ index +")\">Eliminar tarea</button>" + "</li>");
+        "........................" +
+        "<button class='delete_btn' onclick=\"deleteTask(" + index + ")\">Eliminar tarea</button>" + "</li>");
 
     lista += "</ol>";
 
