@@ -5,13 +5,17 @@
 }
 
 body {
-    padding: 30px;
-    background-color: #007bff;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #007bff 50%, #800808 50%);
+    display: flex;
+    align-items: flex-start;
 }
 
 .todo_container {
     background: white;
     border-radius: 10px;
+    width: 80%;
     padding: 20px;
     max-width: 500px;
     margin-left: 20px;
