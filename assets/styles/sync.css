@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.sync_container {
+    margin-top: 50px;
+}
+
+input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+button {
+    padding: 8px 15px;
+    margin-left: 5px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#poke_data img {
+    width: 150px;
+    margin-top: 15px;
+}

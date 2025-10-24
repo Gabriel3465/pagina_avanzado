@@ -7,7 +7,7 @@
 body {
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, #007bff 50%, #800808 50%);
+    background: linear-gradient(to bottom, #007bff 50%, #b62b2b 50%);
     display: flex;
     align-items: flex-start;
 }
