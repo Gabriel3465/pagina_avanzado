@@ -2,15 +2,16 @@
 
 include "connectionController.php";
 
+$auth = new AuthController();
+
 $action = $_POST['action'];
 
 if ($action == "login") {
 
-    $username = $_POST['Username'];
+    $email = $_POST['email'];
     $password = $_POST['Password'];
 
-    $auth = new AuthController();
-    $auth->login($username, $password);
+    $auth->login($email, $password);
 }
 
 if ($action == "register") {
@@ -38,8 +39,7 @@ class AuthController
     {
 
         $conn = $this->connection->connect();
-        if (!$conn->connect_error) {
-
+        if ($conn && !$conn->connect_error) {
             $query = "select * from users where email = ? and password = ?";
 
             $prepared_query = $conn->prepare($query);
@@ -52,14 +52,15 @@ class AuthController
             $users = $results->fetch_all(MYSQLI_ASSOC);
 
             if (count($users) > 0) {
-
-                header('Location: ../index.html');
-
+                header('Location: ../../index.html');
+                exit;
             } else
-                header('Location: ../login.html');
-
+                header('Location: ../../formulario.html');
+            exit;
         } else
-            header('Location: ../login.html');
+            header('Location: ../../login.html');
+        exit;
+
     }
 
     public function register($nombre, $apellido, $email, $numero, $genero, $biografia, $password)
@@ -75,7 +76,7 @@ class AuthController
             $prepared_query->bind_param('sssssss', $nombre, $apellido, $email, $numero, $genero, $biografia, $password);
 
             if ($prepared_query->execute()) {
-                header('Location: ../login.html');
+                header('Location: ../../login.html');
                 exit;
             } else {
                 echo "Error al registrar el usuario.";
