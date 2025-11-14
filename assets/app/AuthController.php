@@ -52,10 +52,10 @@ class AuthController
             $users = $results->fetch_all(MYSQLI_ASSOC);
 
             if (count($users) > 0) {
-                header('Location: ../../index.html');
+                header('Location: ../../user.php');
                 exit;
             } else
-                header('Location: ../../formulario.html');
+                header('Location: ../../user.php');
             exit;
         } else
             header('Location: ../../login.html');

@@ -1,23 +1,21 @@
-<?php 
+<?php
 
-class ConnectionController{
+class ConnectionController
+{
 
-	private $server = "sql300.infinityfree.com"; 
-    private $user = "if0_40304927";              
-    private $password = "GIdD1ZpKFq9";    
-    private $dbname = "if0_40304927_app_db"; 
+    private $HOST = "localhost";
+    private $USER = "root";
+    private $PASS = "";
+    private $DBNM = "APP";
 
-	 public function connect()
+    function connect()
     {
-        $connection = new mysqli($this->server, $this->user, $this->password, $this->dbname);
+        $conn = new mysqli($this->HOST, $this->USER, $this->PASS, $this->DBNM);
 
-        if ($connection->connect_error) {
-            die("Error de conexión: " . $connection->connect_error);
-        } else {
-          
+        if ($conn) {
+            return $conn;
         }
-
-        return $connection;
+        return null;
     }
 
 }
